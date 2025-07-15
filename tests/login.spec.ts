@@ -4,5 +4,6 @@ import { LoginPage } from "../pages/login";
 test("test", async ({ page }) => {
     const login = new LoginPage(page);
     await login.goToLoginPage();
-    await login.login("izzy", "SuperSecretPassword!");
+    await login.login("tomsmith", "SuperSecretPassword!");
+    await login.assertLoginSuccess();
 });
